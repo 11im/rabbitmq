@@ -587,7 +587,7 @@ def createConnectionAndQueue(user='guest',pw='guest'):
         return chan
     return chan
 
-chan = createConnectionAndQueue('admin','rabbitpassword')
+chan = createConnectionAndQueue()
 
 def basicPub():
     chan.basic_publish(exchange='amq.direct',routing_key='test.route',body=data)
